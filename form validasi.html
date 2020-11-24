@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form Validasi</title>
+        <link rel="stylesheet" type="text/css" href="style2.css">
+        <script language="javascript">
+            function Login(){
+                var username=document.login.value;
+                username=username.toLowerCase();
+                var password=document.login.pasword.value;
+                password=password.toLowerCase();
+
+                if (username=="ahmad2017" && password=="integrity"){
+                    alert("Selamat anda sudah mengisi form validasi");
+                }
+                else{
+                    alert("Username and Password Failed");
+                }
+            }
+        </script>
+        <style>
+            body {
+                color: red;
+            }
+            h2{
+                color: #000080;
+            }
+            p {
+                color: rgb(0,0,255)
+            }
+            </style>
+    </head>
+    <body>
+        <form name = "myform">
+            <form id="create_account" action="/signup" method="post"></form>
+            <fieldset id = "signup">
+                <h2>Form Validasi</h2>
+                <form action="">
+                    <label for="">Nama Lengkap Anda</label>
+                    <input type="text" id="masukan nama anda" maxlength="30" ><br>
+                    <label for="">Email Anda</label>
+                    <input type="email" id="masukan email anda" ><br>
+                    <label for="">Jam Keberangkatan</label>
+                    <input type="time" id="jam" min="00.00" max="23.59"><br>
+                    <label for="">Destinasi</label>
+                    <input type="text" id="destinasi"><br>
+                    <label for="">Masukan Jumlah Tiket</label>
+                    <input type="number" id="tiket"><br>
+                    <button type="button" onclick="validasi()">Submit</button> 
+                    </td>           
+            </friendset>
+        </form>
+        <h2 id="namapelanggan"></h2>
+        <h2 id="emailpelanggan"></h2>
+        <h2 id="jamberangkat"></h2>
+        <h2 id="destinasipelanggan"></h2>
+        <h2 id="tiketpelanggan"></h2>
+        <script>
+            function validasi()
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jam = document.getElementById('jam').value;
+            let destinasi = document.getElementById('destinasi').value;
+            let tiket = document.getElementById('tiket').value;
+            if (nama == ""|| nama.length > 30){
+                alert("nama tidak boleh kosong");
+                document.getElementById('nama').focus();
+                return false;
+            }
+            else if (email == ""){
+                alert("email tidak boleh kosong");
+                document.getElementById('email').focus();
+                return false;
+            }
+            else if (jam == ""){
+                alert("jam tidak boleh kosong");
+                document.getElementById('jam').focus();
+                return false;
+            }
+            else if (destinasi == ""){
+                alert("destinasi tidak boleh kosong");
+                document.getElementById('destinasipelanggan').focus();
+                return false;
+            }
+            else if (tiket == ""){
+                alert("tiket tidak boleh kosong");
+                document.getElementById('tiketpelanggan').focus();
+                return false;
+            }
+            else{
+                document.getElementById('namapelanggan').innerHTML= 'nama pelanggan' + nama +'<br>';
+                document.getElementById('emailpelanggan').innerHTML= 'email' + email +'<br>';
+                document.getElementById('jamberangkat').innerHTML= 'jam keberangkatan' + jam +'<br>';
+                document.getElementById('destinasipelanggan').innerHTML= 'destnasi' + destinasi +'<br>';
+                document.getElementById('tiketpelanggan').innerHTML= 'tiket' + tiket +'<br>';
+            }
+        </script>
+    </body>
+</html>

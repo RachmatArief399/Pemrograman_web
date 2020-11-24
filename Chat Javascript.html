@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <style>
+        input{
+            text-align: center;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            padding: 7px 10px;
+            font-size: 18 px;
+            color:chartreuse;
+}
+    </style>
+</head>
+
+<body>
+    <div>			
+        </div>
+        <form method="REQUEST" onsubmit="return kirim();">		
+        <input id="pesan" style="width: 50%" type="text" name="pesan">		
+        <button type="submit" onclick="return kirim();">Kirim</button>	
+        </form>	
+
+        <script type="text/javascript">	
+        function kirim() 
+        {		
+            let pesan = document.getElementById("pesan").value;		
+            document.getElementById("isichat").innerHTML += pesan + "<br/>";		
+            document.getElementById("pesan").value = "";		
+            return false;	
+        }
+    </script>
+</body>
+</html>

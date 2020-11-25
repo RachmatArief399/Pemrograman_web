@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title> Form Login </title>
+        <style type="teks/css">
+            body {
+                font-family: sans-serif;
+            }
+            .kotak{
+                width: 350px;
+                margin: auto;
+                margin-top:15px;
+                padding: 10px
+            }
+            p{
+                margin-bottom: 200px;
+                color: #000000;
+            }
+            input{
+                text-align: right;
+                width: 100%;
+                margin-bottom: 20px;
+                margin-top: 10px;
+                padding: 7px 10px;
+                font-size: 18 px;
+            }
+        </style>
+</head>
+<center>
+<body style="background-color: #b4b4ee ;color: rgb(72, 19, 116);">
+        <div class="main">
+            <div class="head">
+    <p> Login </p>
+            </div>
+            <hr />
+    <div class="form f1">
+                <form method="POST">
+                    <p class="name">
+            Masukan Username :</p>
+            <input type="text"  placeholder="Masuka Username" class="name-inp" id="username" name="username"></p>
+            <p class="name">
+            
+            Masukan Kata Sandi :</p>
+            <p>
+            <input type="password"  placeholder=" Masukan Password" class="pass" id="password" name=" password"></p>
+            <p>
+            <input type="submit" name="sb" value="Submit" class="sub" onclick="return login()"></p>
+</body>
+<script>
+    function login() {
+		username = document.getElementById("username").value;
+		password = document.getElementById("password").value;
+
+		if (username == "" || password == "") {
+			alert("Username / Password Tidak Boleh Kosong");
+			return false;
+		}
+		else if (password.length < 10) {
+			alert("Password Kurang dari 10");
+			return false;
+		}
+		else if (username ==password == "") {
+			window.location = "Kurs Rupiah.html";
+			return false;
+		}else{
+			alert("Username / Password anda salah");
+		}
+	}
+</script>
+<hr />
+</center>
+</html>

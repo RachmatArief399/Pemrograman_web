@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Parker</title>
+  <style>
+      img{
+          width:30%;
+          border:1px solid #880998;
+      }
+  </style>
+  <a href="form Validasi.html">
+  </head>
+  </html>

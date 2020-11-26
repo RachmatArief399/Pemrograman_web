@@ -9,7 +9,11 @@
           width:30%;
           border:1px solid #880998;
       }
+      h1{
+          color: #000080
+      }
   </style>
-  <a href="form Validasi.html">
   </head>
+  <body>
+  <center><h1>Pengisian Formulir Sukses</h1></center>
   </html>
